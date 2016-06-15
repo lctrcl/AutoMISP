@@ -173,7 +173,7 @@ else
 	echo "		AllowOverride all" >> /etc/apache2/sites-available/misp.conf
 	echo "		Order allow,deny" >> /etc/apache2/sites-available/misp.conf
 	echo "		allow from all" >> /etc/apache2/sites-available/misp.conf
-    echo "	</Directory>" >> /etc/apache2/sites-available/misp.conf
+	echo "	</Directory>" >> /etc/apache2/sites-available/misp.conf
 	echo "	RewriteEngine On" >> /etc/apache2/sites-available/misp.conf
 	echo "	RewriteCond %{HTTPS} off" >> /etc/apache2/sites-available/misp.conf
 	echo "	RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}" >> /etc/apache2/sites-available/misp.conf
@@ -195,7 +195,7 @@ else
 	echo "		AllowOverride all" >> /etc/apache2/sites-available/misp-ssl.conf
 	echo "		Order allow,deny" >> /etc/apache2/sites-available/misp-ssl.conf
 	echo "		allow from all" >> /etc/apache2/sites-available/misp-ssl.conf
-    echo "	</Directory>" >> /etc/apache2/sites-available/misp-ssl.conf
+	echo "	</Directory>" >> /etc/apache2/sites-available/misp-ssl.conf
 	echo "	RewriteEngine On" >> /etc/apache2/sites-available/misp-ssl.conf
 	echo "	RewriteCond %{HTTPS} off" >> /etc/apache2/sites-available/misp-ssl.conf
 	echo "	RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}" >> /etc/apache2/sites-available/misp-ssl.conf
