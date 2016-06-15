@@ -56,7 +56,7 @@ function error_check
 if [ $? -eq 0 ]; then
 	print_good "$1 successfully completed."
 else
-	print_error "$1 failed. Please check $logfile for more details, or contact deusexmachina667 at gmail dot com for more assistance."
+	print_error "$1 failed. Please check $logfile for more details."
 exit 1
 fi
 
