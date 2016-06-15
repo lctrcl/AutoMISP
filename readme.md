@@ -2,7 +2,7 @@ AutoMISP
 
 a da_667 endeavor
 
-This shell script is designed to automatically install MISP on Ubuntu 16.04. 
+This shell script is designed to automatically install MISP (https://github.com/MISP/MISP) on Ubuntu 16.04. 
 
 What this script does:
 
@@ -41,6 +41,8 @@ email: deusexmachina667 at gmail dot com
 
 With thanks to:
 cipherli.st for stronger SSL configuration
+
+the MISP project maintainers for making such a great platform
 
 infde6 for the documentation on how to install MISP on ubuntu 16.04 (https://github.com/MISP/MISP/issues/1195)
 
