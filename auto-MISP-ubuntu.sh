@@ -169,10 +169,10 @@ else
 	echo "	ServerName `hostname`.local" >> /etc/apache2/sites-available/misp.conf	
 	echo "	DocumentRoot /var/www/MISP/app/webroot" >> /etc/apache2/sites-available/misp.conf
 	echo "	<Directory /var/www/MISP/app/webroot>" >> /etc/apache2/sites-available/misp.conf
-    echo "		Options -Indexes" >> /etc/apache2/sites-available/misp.conf
-    echo "		AllowOverride all" >> /etc/apache2/sites-available/misp.conf
-    echo "		Order allow,deny" >> /etc/apache2/sites-available/misp.conf
-    echo "		allow from all" >> /etc/apache2/sites-available/misp.conf
+	echo "		Options -Indexes" >> /etc/apache2/sites-available/misp.conf
+	echo "		AllowOverride all" >> /etc/apache2/sites-available/misp.conf
+	echo "		Order allow,deny" >> /etc/apache2/sites-available/misp.conf
+	echo "		allow from all" >> /etc/apache2/sites-available/misp.conf
     echo "	</Directory>" >> /etc/apache2/sites-available/misp.conf
 	echo "	RewriteEngine On" >> /etc/apache2/sites-available/misp.conf
 	echo "	RewriteCond %{HTTPS} off" >> /etc/apache2/sites-available/misp.conf
@@ -191,10 +191,10 @@ else
 	echo "	ServerName `hostname`.local" >> /etc/apache2/sites-available/misp-ssl.conf	
 	echo "	DocumentRoot /var/www/MISP/app/webroot" >> /etc/apache2/sites-available/misp-ssl.conf
 	echo "	<Directory /var/www/MISP/app/webroot>" >> /etc/apache2/sites-available/misp-ssl.conf
-    echo "		Options -Indexes" >> /etc/apache2/sites-available/misp-ssl.conf
-    echo "		AllowOverride all" >> /etc/apache2/sites-available/misp-ssl.conf
-    echo "		Order allow,deny" >> /etc/apache2/sites-available/misp-ssl.conf
-    echo "		allow from all" >> /etc/apache2/sites-available/misp-ssl.conf
+	echo "		Options -Indexes" >> /etc/apache2/sites-available/misp-ssl.conf
+	echo "		AllowOverride all" >> /etc/apache2/sites-available/misp-ssl.conf
+	echo "		Order allow,deny" >> /etc/apache2/sites-available/misp-ssl.conf
+	echo "		allow from all" >> /etc/apache2/sites-available/misp-ssl.conf
     echo "	</Directory>" >> /etc/apache2/sites-available/misp-ssl.conf
 	echo "	RewriteEngine On" >> /etc/apache2/sites-available/misp-ssl.conf
 	echo "	RewriteCond %{HTTPS} off" >> /etc/apache2/sites-available/misp-ssl.conf
@@ -210,13 +210,13 @@ else
 	echo "	SSLSessionTickets Off" >> /etc/apache2/sites-available/misp-ssl.conf
 	echo "	SSLUseStapling on" >> /etc/apache2/sites-available/misp-ssl.conf		
 	echo "	SSLOpenSSLConfCmd Curves secp384r1" >> /etc/apache2/sites-available/misp-ssl.conf
-    echo "	SSLCertificateFile /etc/apache2/ssl/misp.crt" >> /etc/apache2/sites-available/misp-ssl.conf
-    echo "	SSLCertificateKeyFile /etc/apache2/ssl/misp.key" >> /etc/apache2/sites-available/misp-ssl.conf
+	echo "	SSLCertificateFile /etc/apache2/ssl/misp.crt" >> /etc/apache2/sites-available/misp-ssl.conf
+	echo "	SSLCertificateKeyFile /etc/apache2/ssl/misp.key" >> /etc/apache2/sites-available/misp-ssl.conf
 	echo "#	SSLCertificateChainFile /etc/ssl/private/misp-chain.crt" >> /etc/apache2/sites-available/misp-ssl.conf
 	echo "	LogLevel warn" >> /etc/apache2/sites-available/misp-ssl.conf
-    echo "	ErrorLog /var/log/apache2/misp.local_error.log" >> /etc/apache2/sites-available/misp-ssl.conf
-    echo "	CustomLog /var/log/apache2/misp.local_access.log combined" >> /etc/apache2/sites-available/misp-ssl.conf
-    echo "	ServerSignature Off" >> /etc/apache2/sites-available/misp-ssl.conf
+	echo "	ErrorLog /var/log/apache2/misp.local_error.log" >> /etc/apache2/sites-available/misp-ssl.conf
+	echo "	CustomLog /var/log/apache2/misp.local_access.log combined" >> /etc/apache2/sites-available/misp-ssl.conf
+	echo "	ServerSignature Off" >> /etc/apache2/sites-available/misp-ssl.conf
 	echo "</VirtualHost>" >> /etc/apache2/sites-available/misp-ssl.conf
 	echo "#This setting has to be specified outside of the VirtualHost directive" >> /etc/apache2/sites-available/misp-ssl.conf
 	echo "SSLStaplingCache \"shmcb:logs/stapling-cache(150000)\"" >> /etc/apache2/sites-available/misp-ssl.conf
