@@ -41,5 +41,13 @@ email: deusexmachina667 at gmail dot com
 
 With thanks to:
 cipherli.st for stronger SSL configuration
+
 infde6 for the documentation on how to install MISP on ubuntu 16.04 (https://github.com/MISP/MISP/issues/1195)
+
+Hurricane Labs - for giving me the time to work on this.
+
 you. for running this :D
+
+Licensing: This project released under MIT Licensing.
+
+Property of Hurricane Labs
