@@ -1,5 +1,5 @@
 #!/bin/bash
-#Autosnort script for Ubuntu 12.04+
+#AutoMISP script for Ubuntu 12.04+
 ########################################
 
 #PLEASE MAKE SURE TO SET THE FOLLOWING VARIABLES:
@@ -393,9 +393,10 @@ cd /opt/misp_mod
 git clone https://github.com/MISP/misp-modules.git &>> $logfile
 error_check "Download of MISP modules"
 cd misp-modules
-pip3 install -r REQUIREMENTS &>> $logfile
+sudo pip3 install -I -r REQUIREMENTS &>> $logfile
+sudo pip3 install -I . &>> $logfile
 error_check 'MISP module requirement installation'
-sudo -u www-data python3 /opt/misp_mod/misp-modules/bin/misp-modules.py &> /var/log/misp_mod_logs/misp_mod_logs-`date +%Y-%m-%d:%H:%M:%S`.log &
+sudo -u www-data /usr/local/bin/misp-modules -s &> /var/log/misp_mod_logs/misp_mod_logs-`date +%Y-%m-%d:%H:%M:%S`.log &
 error_check 'MISP module script'
 
 ########################################
@@ -409,7 +410,7 @@ else
 	cp /etc/rc.local /etc/rc.local.bak
 	sed -i "s#exit 0##" /etc/rc.local
 	echo "sudo -u www-data bash /var/www/MISP/app/Console/worker/start.sh" >> /etc/rc.local
-	echo "sudo -u www-data python3 /opt/misp_mod/misp-modules/bin/misp-modules.py &> /var/log/misp_mod_logs/misp_mod_logs-`date +%Y-%m-%d:%H:%M:%S`.log &" >> /etc/rc.local
+	echo "sudo -u www-data /usr/local/bin/misp-modules -s > /var/log/misp_mod_logs/misp_mod_logs-`date +%Y-%m-%d:%H:%M:%S`.log &" >> /etc/rc.local
 	echo "exit 0" >> /etc/rc.local
 	print_good "rc.local successfully modified"
 fi
